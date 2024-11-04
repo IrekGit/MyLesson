@@ -11,7 +11,7 @@ class House:
 
     def __del__(self, *args):
         self.houses_history.remove(self.name)   # удаление снесенного дома из списка
-        print(f'{self.name} снесён ({self.number_of_floors} этажей), но он останется в истории')
+        print(f'{self.name} снесён ({self.number_of_floors} этажей), и в истории, увы, он также не останется...')
 
 
 h1 = House('ЖК Эльбрус', 10)
