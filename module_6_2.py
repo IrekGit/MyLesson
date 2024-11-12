@@ -27,7 +27,7 @@ class Vehicle:
         if new_color in Vehicle.__COLOR_VARIANTS:
             self.__color = new_color
         else:
-            print(f"Нельзя сменить цвет на {new_color}")
+            print(f"Сменить цвет на {new_color} невозможно, такой цвет отсутствует в списке")
 
 
 class Sedan(Vehicle):
