@@ -1,6 +1,7 @@
 import math
 
 class Figure:
+    name = 'Загадочные фигуры...'
     sides_count = 0
 
     def __init__(self, color, *sides):
@@ -36,6 +37,7 @@ class Figure:
 
 
 class Circle(Figure):
+    name = 'Круг'
     sides_count = 1
 
     def __init__(self, color, *sides):
@@ -47,6 +49,7 @@ class Circle(Figure):
 
 
 class Triangle(Figure):
+    name = 'Треугольник'
     sides_count = 3
 
     def get_square(self):
@@ -56,6 +59,7 @@ class Triangle(Figure):
 
 
 class Cube(Figure):
+    name = 'Куб'
     sides_count = 12
 
     def __init__(self, color, *sides):
@@ -69,20 +73,20 @@ class Cube(Figure):
 
 
 circle1 = Circle((200, 200, 100), 10)
-print(f'Текущий цвет круга {circle1.get_color()}, длина окружности {len(circle1)}')
+print(f'Фигура: {circle1.name}, цвет: {circle1.get_color()}, длина окружности {len(circle1)}')
 
 cube1 = Cube((222, 35, 130), 6)
-print(f'Текущий цвет куба {cube1.get_color()}, длина ребра {cube1.get_sides()[0]}')
+print(f'Фигура: {cube1.name}, цвет: {cube1.get_color()}, длина ребра {cube1.get_sides()[0]}')
 
 circle1.set_color(55, 66, 77)
-print(f'Текущий цвет круга {circle1.get_color()}')
+print(f'Фигура: {circle1.name}, цвет: {circle1.get_color()}')
 
 cube1.set_color(300, 70, 15)
-print(f'Текущий цвет куба {cube1.get_color()}')
+print(f'Фигура: {cube1.name}, цвет: {cube1.get_color()}')
 
 cube1.set_sides(5, 3, 12, 4, 5)
-print(f'Длины сторон куба {cube1.get_sides()}, его объем равен {cube1.get_volume()}')
+print(f'Фигура: {cube1.name}, длины {cube1.sides_count} сторон: {cube1.get_sides()}, объем: {cube1.get_volume()}')
 
 circle1.set_sides(15)
-print(f'Измененная длина окружности {circle1.get_sides()}')
-print(f'Площадь круга с длиной окружности {len(circle1)} равна {circle1.get_square()}')
+print(f'Фигура: {circle1.name}, измененная длина окружности: {circle1.get_sides()}')
+print(f'Фигура: {circle1.name}, длина окружности: {len(circle1)}, площадь: {circle1.get_square()}')
