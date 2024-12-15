@@ -36,15 +36,12 @@ class Bank:
 
 bk = Bank()
 
-# Создание потоков
 th1 = threading.Thread(target=bk.deposit)
 th2 = threading.Thread(target=bk.take)
 
-# Запуск потоков
 th1.start()
 th2.start()
 
-# Ожидание завершения потоков
 th1.join()
 th2.join()
 
